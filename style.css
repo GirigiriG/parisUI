@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
-
+/* Main card */
 .card {
     width: 280px;
     height: 500px;
@@ -15,7 +14,7 @@
     transition: height 0.3s ease-in, translate 0.3s ease-in;
 }
 
-
+/* this div will hold the city image */
 .city {
     width: 100%;
     height: 50%;
