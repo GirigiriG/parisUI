@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<body>
+   <div class="card">
+      <div class="city">
+          <img src="https://images.unsplash.com/photo-1526285348874-b7ff025fff66?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2017359c544201918d84058df78b77d1&auto=format&fit=crop&w=800&q=80" alt="">
+
+          <div class="gallary">
+              <div class="snap">
+                  <img src="https://images.unsplash.com/photo-1503248739195-65669aaf5b0f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af247d22850fd5c118a3d61ab1041cd7&auto=format&fit=crop&w=1220&q=80" alt="">
+              </div>
+              <div class="snap">
+                  <img src="https://images.unsplash.com/photo-1515871204537-49a5fe66a31f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8e0a0bcf73f65a1ecfdb9b97ec7204c&auto=format&fit=crop&w=1574&q=80" alt="">
+              </div>
+              <div class="snap">
+                  <img src="https://images.unsplash.com/photo-1505205296326-2178af1b47bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16ef2e41e10c852a17abf9ce4f430d62&auto=format&fit=crop&w=1650&q=80" alt="">
+              </div>
+              <div class="snap">
+                  <img src="https://images.unsplash.com/photo-1471623320832-752e8bbf8413?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1a6706fc9d52332f12cba1286db56126&auto=format&fit=crop&w=698&q=80" alt="">
+              </div>
+          </div>
+          <h3>The city of love ~ Paris</h3>
+          <div class="info" id="js--info">
+              <h4>About Paris</h4>
+              <p id="desc">paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.</p> 
+          </div>
+          <footer>
+              <button>Come visit us!</button>
+            </footer>
+      </div>
+   </div>
+
+   <script>
+       (function() {
+        var desc = document.getElementById("desc")
+        var show = document.getElementById("show")
+        var truncateDescription = "";
+        truncateDescription += desc.innerHTML;
+       
+        var info = document.getElementById("js--info")
+        desc.textContent = truncateDescription.substring(0 , 130)
+       //description eventlistener
+       desc.addEventListener('click', function(){
+           console.log(info.offsetHeight)
+           if (info.offsetHeight == 131) {
+            desc.textContent = truncateDescription.substring(0 , 200)
+                 info.style.height = "132px";
+           }else {
+            desc.textContent = truncateDescription.substring(0, 130) + " ...";
+               info.style.height = "120px"
+           } 
+       }, true)
+       })()
+   </script>
+</body>
+</html>
