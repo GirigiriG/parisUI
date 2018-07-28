@@ -61,7 +61,9 @@ h3 {
     box-shadow: 0 0 10px 3px rgba(153, 153, 153, 0.527);
     transition: display 2.4s ease-in;
 }
-
+/* Currently having issue with animating the transistion for the hover effect 
+   unsure why its not working. i'll take a look at it later... On to ES6!! 
+*/
 .city:hover .gallary {
     display: block;
     transition: display 1.2s ease-in;
